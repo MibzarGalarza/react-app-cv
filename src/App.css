@@ -129,7 +129,7 @@ body {
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: #1E1E1E;
+  background-color: #010409;
   color: var(--text-color);
 }
 
@@ -154,6 +154,7 @@ img {
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
   padding: 2rem 0 4rem;
+  background-color:#010409;
 }
 
 #particles-js {
@@ -185,7 +186,7 @@ img {
   max-width: 768px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
-  background-color: #1E1E1E;
+  background-color: #161B22;
 }
 
 .grid {
@@ -199,7 +200,7 @@ img {
   bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #1E1E1E;
+  background-color: #161B22;
 }
 
 /*==================== NAV ====================*/
@@ -312,6 +313,17 @@ img {
   align-items: center;
 }
 
+.login-text{
+  color: #1E1E1E;
+}
+
+.home__content-act{
+  grid-template-columns: .5fr 3fr;
+  padding-top: 3.5 rem;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
 .home__social{
   display:grid;
   grid-template-columns: max-content;
@@ -342,6 +354,11 @@ img {
   margin-top: 6rem;
   margin-left: 5rem;
 }
+.img--perfil{
+  width: 2rem;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
 
 .home__img{
   display: flex;
@@ -362,9 +379,20 @@ img {
   margin-bottom: var(--mb-0-75);
 }
 
+
+.home__subtitle_user{
+  font-size: var(--h3-font-size);
+  color:var(--text-color);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-75);
+}
+
 .home__description{
   margin-bottom: var(--mb-2);
 }
+
+
+
 
 .home__scroll{
   display:none;
@@ -396,14 +424,34 @@ img {
 
 /*==================== BUTTONS ====================*/
 
+.buttongoogle{
+  align-items: center !important;
+  display: inline-block;
+    background-color: white;
+    color: #000000;
+    padding: .5rem; border-radius: .5rem;
+    font-weight: var(--font-medium);
+    padding: 3px 7rem 3px 7rem;
+  }
+
+  
 .button{
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
-  padding: 1rem;
+  padding: .5rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
 }
+
+.buttonsining {
+ 
+  padding: .6rem !important;
+ 
+}
+
+
+
 
 .button:hover{
   background-color: var(--first-color-alt);
@@ -427,6 +475,11 @@ img {
 .button--flex{
   display: inline-flex;
   align-items: center;
+  margin-right: 6rem;
+}
+
+.register{
+  margin-left: 5rem;
 }
 
 .button--small{
@@ -993,7 +1046,8 @@ img {
   font-size: var(--normal-font-size);
   border: none;
   outline: none;
-  padding: .25rem .5rem .5rem 0;
+  padding: .5rem;
+  border-radius: 10px;
 
 }
 /*==================== FOOTER ====================*/
@@ -1449,5 +1503,87 @@ img {
   margin-right: auto;
   height: 3.5rem;
 }
+
+/* drop user */
+
+.user-profile {
+  position: relative;
+}
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.user-profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  width: 300px; /* Ajusta el valor según tu preferencia */
+  overflow-y: auto;
+  position: absolute;
+  top: 100%; /* Coloca la lista debajo de la imagen */
+  right: 0; /* Coloca el menú a la derecha */
+  background-color: #161B22;
+  border: 1px solid #ccc;
+  border-radius: 10%;
+  list-style: none;
+  padding: 0;
+  display: none;
+  color: #000; /* Color de texto negro */ 
+  margin-right: 1rem;
+}
+
+.dropdown-item {
+  padding: 10px;
+  text-align: center;
+}
+
+.user-profile:hover .dropdown-menu {
+  display: block; /* Muestra la lista al pasar el ratón sobre la foto */
+}
+
+.liuser{
+  padding: 0px 10px 0px 10px;
+
+}
+
+.img--perfil-user {
+  width: 5rem;
+  border-radius: 50%;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; /* Asegura que la imagen se comporte como un bloque */
+  /* Opcionalmente, puedes agregar margin-top y margin-bottom para centrar verticalmente si es necesario */
+}
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+  width: 30px; /* Ancho igual al alto para hacerlo circular */
+  height: 30px; /* Ancho igual al alto para hacerlo circular */
+  border-radius: 50%; /* Hacer el botón circular */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Agregar transiciones */
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* Sin sombra inicialmente */
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Cambio de color al pasar el mouse */
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3); /* Agregar sombra circular al pasar el mouse */
+}
+
+
+
 
 

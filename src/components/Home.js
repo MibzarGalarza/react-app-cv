@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useAuth } from "../context/AuthContext";
+import myImage from '../img/me.jpg';
+
 
 
 export function Home() {
@@ -13,12 +15,34 @@ export function Home() {
     }
   };
 
+  function toggleDropdown() {
+    var dropdown = document.getElementById("profileDropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+ 
+  
+  // Cierra el menú si se hace clic fuera de él
+  document.addEventListener("click", function (event) {
+    const dropdown = document.getElementById("profileDropdown");
+    const dropdownButton = document.querySelector(".img--perfil"); // Reemplaza con el selector correcto de tu botón de perfil
+  
+    // Verifica si se hizo clic fuera del menú o en el botón de perfil
+    if (!dropdown.contains(event.target) && event.target !== dropdownButton) {
+      dropdown.style.display = "none"; // Cierra el menú
+    }
+  });
+
+
+  
+
   // Verifica si el usuario ha iniciado sesión con Google y si tiene una foto de perfil
   const userPhotoURL = user.photoURL;
 
 
 
   return (
+
     <div >
 
       <header class="header" id="header">
@@ -60,25 +84,44 @@ export function Home() {
               </li>
 
               <li class="nav__item">
-
                 <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                   <div className="flex items-center justify-center">
                     <img
                       src={userPhotoURL} // Cambia '/default-profile-image.jpg' al URL de tu imagen por defecto
                       alt="Profile"
-                      className="w-16 h-16 rounded-full mb-4"
+                      className="w-16 h-16 rounded-full mb-4 img--perfil"
+                      onClick={toggleDropdown}
                     />
                   </div>
-                  <p className="text-xl mb-4">Welcome, {user.displayName || user.email}</p>
-                  <button
-                    className="bg-slate-200 hover:bg-slate-300 rounded py-2 px-4 text-black"
-                    onClick={handleLogout}
-                  >
-                    Logout
-                  </button>
+
+                  <ul className="dropdown-menu text-small" id="profileDropdown">
+                    <button onClick={toggleDropdown} className="close-button">X</button>
+                    <img
+                      src={userPhotoURL}
+                      alt="Profile"
+                      className="w-16 h-16 rounded-full mb-4 img--perfil-user"
+                    />
+                    <li className="liuser">
+                      <span className="dropdown-item" id="displayName">
+                        <p className="text-xl mb-4 home__subtitle_user">Welcome, {user.displayName || user.email}</p>
+                      </span>
+
+                      <div>
+                    <button
+                      className="bg-slate-200 hover:bg-slate-300 rounded home__subtitle_user liuser py-2 px-4 text-black"
+                      onClick={handleLogout}
+                    >
+                      Logout
+                    </button>
+                    </div>
+                    </li>
+                   
+                  </ul>
                 </div>
 
               </li>
+
+
 
 
 
@@ -123,6 +166,7 @@ export function Home() {
                 <path fill="#1D6C70" d="M71.6,-21.2C79.8,2,64.5,34.9,43,47.8C21.6,60.8,-6.2,53.7,-25.6,38.8C-45.1,23.8,-56.2,1,-50.6,-18.7C-44.9,-38.4,-22.5,-54.9,4.6,-56.4C31.7,-57.9,63.4,-44.4,71.6,-21.2Z" transform="translate(100 100)" />
 
               </svg>
+              <img src={myImage} className="home__blob-img" alt="" />
             </div>
             <div class="home__data">
               <h1 class="home__tittle">Hi, My name is Mibzar</h1>
@@ -133,13 +177,7 @@ export function Home() {
               </a>
             </div>
           </div>
-          <div class="home__scroll">
-            <a href="#about" class="home__scroll-button button--flex">
-              <i class="uil uil-mouse-alt-2 home__scroll-mouse"></i>
-              <span class="home__scroll-name">Scroll down</span>
-              <i class="uil uil-arrow-down home__scroll-arrow"></i>
-            </a>
-          </div>
+        
         </div>
 
 
