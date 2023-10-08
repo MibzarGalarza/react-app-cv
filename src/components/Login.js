@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { Alert } from "./Alert";
 import myImage from '../img/me.jpg';
+import imageGoogle from '../img/google.png';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export function Login() {
   const [user, setUser] = useState({
@@ -77,12 +79,12 @@ export function Login() {
         <div class="home__container container grid">
           <div class="home__content grid">
             <div class="home__social">
-              <a href="https://www.linkedin.com/in/mibzar-galarza-659542233/" target="_blank" class="home__social-icon" rel="noreferrer">
-                <i class="uil uil-linkedin-alt"></i>
+            <a href="https://www.linkedin.com/in/mibzar-galarza-659542233/" target="_blank" className="home__social-icon" rel="noreferrer">
+                <FaLinkedin className="uil" /> {/* Aquí puedes agregar clases personalizadas */}
               </a>
 
-              <a href="https://github.com/M1bzar" target="_blank" class="home__social-icon" rel="noreferrer">
-                <i class="uil uil-github"></i>
+              <a href="https://github.com/M1bzar" target="_blank" className="home__social-icon" rel="noreferrer">
+                <FaGithub className="uil" /> {/* Aquí puedes agregar clases personalizadas */}
               </a>
             </div>
             <div class="home__img">
@@ -158,8 +160,12 @@ export function Login() {
                 onClick={handleGoogleSignin}
                 className="bg-slate-50 hover:bg-slate-200 text-black buttongoogle   shadow rounded border-2 border-gray-300 py-2 px-4 w-full home__subtitle"
               >
-                Google login
+                <div className="logGoogle"><img src={imageGoogle} className="home__google" alt="" /></div>
+                <p className="googleP">Google Account</p>
+                
               </button>
+             
+
               <p className="my-4 text-sm flex justify-between px-3 home__description">
                 Don't have an account?
                 <Link to="/register" className="text-blue-700 hover:text-blue-900 register home__description">

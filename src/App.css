@@ -426,7 +426,7 @@ img {
 
 .buttongoogle{
   align-items: center !important;
-  display: inline-block;
+  display: flex;
     background-color: white;
     color: #000000;
     padding: .5rem; border-radius: .5rem;
@@ -1584,6 +1584,17 @@ img {
 }
 
 
+.home__google{
+  width: 70px;
+  padding: auto;
+  margin-right: 1rem;
+
+}
+
+
+.logGoogle{
+  width: 50px;
+}
 
 
 

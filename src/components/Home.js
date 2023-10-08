@@ -2,6 +2,7 @@
 import { useAuth } from "../context/AuthContext";
 import myImage from '../img/me.jpg';
 import myProfile from '../img/profile.png';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 
 
@@ -88,7 +89,7 @@ export function Home() {
                 <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                   <div className="flex items-center justify-center">
                     <img
-                      src={userPhotoURL || myProfile } // Cambia '/default-profile-image.jpg' al URL de tu imagen por defecto
+                      src={userPhotoURL || myProfile} // Cambia '/default-profile-image.jpg' al URL de tu imagen por defecto
                       alt="Profile"
                       className="w-16 h-16 rounded-full mb-4 img--perfil"
                       onClick={toggleDropdown}
@@ -98,7 +99,7 @@ export function Home() {
                   <ul className="dropdown-menu text-small" id="profileDropdown">
                     <button onClick={toggleDropdown} className="close-button">X</button>
                     <img
-                      src={userPhotoURL || myProfile }
+                      src={userPhotoURL || myProfile}
                       alt="Profile"
                       className="w-16 h-16 rounded-full mb-4 img--perfil-user"
                     />
@@ -154,12 +155,12 @@ export function Home() {
         <div class="home__container container grid">
           <div class="home__content grid">
             <div class="home__social">
-              <a href="https://www.linkedin.com/in/mibzar-galarza-659542233/" target="_blank" class="home__social-icon" rel="noreferrer">
-                <i class="uil uil-linkedin-alt"></i>
+              <a href="https://www.linkedin.com/in/mibzar-galarza-659542233/" target="_blank" className="home__social-icon" rel="noreferrer">
+                <FaLinkedin className="uil" /> {/* Aquí puedes agregar clases personalizadas */}
               </a>
 
-              <a href="https://github.com/M1bzar" target="_blank" class="home__social-icon" rel="noreferrer">
-                <i class="uil uil-github"></i>
+              <a href="https://github.com/M1bzar" target="_blank" className="home__social-icon" rel="noreferrer">
+                <FaGithub className="uil" /> {/* Aquí puedes agregar clases personalizadas */}
               </a>
             </div>
             <div class="home__img">
