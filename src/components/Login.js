@@ -143,7 +143,7 @@ export function Login() {
                     className="bg-blue-500 hover:bg-blue-700  home__subtitle button buttonsingin button--flex sing-in text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                     type="submit"
                   >
-                    Sign In
+                    Long In
                   </button>
                   <a
                     className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 home__description"

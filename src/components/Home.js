@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useAuth } from "../context/AuthContext";
 import myImage from '../img/me.jpg';
+import myProfile from '../img/profile.png';
 
 
 
@@ -20,13 +21,13 @@ export function Home() {
     dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
   }
 
- 
-  
+
+
   // Cierra el menú si se hace clic fuera de él
   document.addEventListener("click", function (event) {
     const dropdown = document.getElementById("profileDropdown");
     const dropdownButton = document.querySelector(".img--perfil"); // Reemplaza con el selector correcto de tu botón de perfil
-  
+
     // Verifica si se hizo clic fuera del menú o en el botón de perfil
     if (!dropdown.contains(event.target) && event.target !== dropdownButton) {
       dropdown.style.display = "none"; // Cierra el menú
@@ -34,7 +35,7 @@ export function Home() {
   });
 
 
-  
+
 
   // Verifica si el usuario ha iniciado sesión con Google y si tiene una foto de perfil
   const userPhotoURL = user.photoURL;
@@ -87,7 +88,7 @@ export function Home() {
                 <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                   <div className="flex items-center justify-center">
                     <img
-                      src={userPhotoURL} // Cambia '/default-profile-image.jpg' al URL de tu imagen por defecto
+                      src={userPhotoURL || myProfile } // Cambia '/default-profile-image.jpg' al URL de tu imagen por defecto
                       alt="Profile"
                       className="w-16 h-16 rounded-full mb-4 img--perfil"
                       onClick={toggleDropdown}
@@ -97,7 +98,7 @@ export function Home() {
                   <ul className="dropdown-menu text-small" id="profileDropdown">
                     <button onClick={toggleDropdown} className="close-button">X</button>
                     <img
-                      src={userPhotoURL}
+                      src={userPhotoURL || myProfile }
                       alt="Profile"
                       className="w-16 h-16 rounded-full mb-4 img--perfil-user"
                     />
@@ -107,15 +108,15 @@ export function Home() {
                       </span>
 
                       <div>
-                    <button
-                      className="bg-slate-200 hover:bg-slate-300 rounded home__subtitle_user liuser py-2 px-4 text-black"
-                      onClick={handleLogout}
-                    >
-                      Logout
-                    </button>
-                    </div>
+                        <button
+                          className="bg-slate-200 hover:bg-slate-300 rounded home__subtitle_user liuser py-2 px-4 text-black"
+                          onClick={handleLogout}
+                        >
+                          Logout
+                        </button>
+                      </div>
                     </li>
-                   
+
                   </ul>
                 </div>
 
@@ -177,7 +178,7 @@ export function Home() {
               </a>
             </div>
           </div>
-        
+
         </div>
 
 
