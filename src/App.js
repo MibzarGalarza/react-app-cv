@@ -7,6 +7,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import './App.css';
 
 import { AuthProvider } from "./context/AuthContext";
+import Api from "./components/api"; // Importa el componente Api
 
 function App() {
   return (
@@ -14,12 +15,12 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/api" element={<Api />} /> {/* Agrega la ruta para tu componente Api */}
           <Route
             path="/"
             element={
               <ProtectedRoute>
                 <Home />
-                
               </ProtectedRoute>
             }
           />
