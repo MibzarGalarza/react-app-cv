@@ -312,6 +312,12 @@ img {
   padding-top: 3.5 rem;
   align-items: center;
 }
+.home__content-api{
+  grid-template-columns: .5fr 3fr;
+  padding-top: 3.5 rem;
+  align-items: center;
+  display: inline-flex;
+}
 
 .login-text{
   color: #1E1E1E;
@@ -1596,5 +1602,51 @@ img {
   width: 50px;
 }
 
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 2rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #444;
+}
+
+.card-date {
+  font-size: 12px;
+  color: #888;
+}
 
 
