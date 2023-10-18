@@ -83,36 +83,31 @@ export function Api() {
           <div class="nav__menu" id="nav-menu">
             <ul class="nav__list grid">
               <li class="nav__item">
-                <a href="#home" class="nav__link active-link">
+                <a href="/#home" class="nav__link active-link">
                   <i class="uil uil-estate nav__icon"></i>Home
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#about" class="nav__link">
-                  <i class="uil uil-user nav__icon"></i> About
+                <a href="/#about" class="nav__link">
+                  <i class="uil uil-user nav__icon"></i> About Me
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#skills" class="nav__link">
+                <a href="/#skills" class="nav__link">
                   <i class="uil uil-file nav__icon"></i>Skills
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#services" class="nav__link">
+                <a href="/#services" class="nav__link">
                   <i class="uil uil-briefcase-alt nav__icon"></i> Services
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#portfolio" class="nav__link">
+                <a href="/#portfolio" class="nav__link">
                   <i class="uil uil-scenery nav__icon"></i>Portafolio
                 </a>
               </li>
-              <li class="nav__item">
-                <a href="#Contact" class="nav__link">
-                  <i class="uil uil-message nav__icon"></i>Contact me
-
-                </a>
-              </li>
+            
 
               <li class="nav__item">
                 <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">

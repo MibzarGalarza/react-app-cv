@@ -79,8 +79,8 @@ export function Home() {
                 </a>
               </li>
               <li class="nav__item">
-                <a href="#Contact" class="nav__link">
-                  <i class="uil uil-message nav__icon"></i>Contact me
+                <a href="/api" class="nav__link">
+                  <i class="uil uil-message nav__icon"></i>My Blog
 
                 </a>
               </li>
