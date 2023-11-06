@@ -10,7 +10,7 @@ In the project directory, you can run:
 
 Install all dependencies for use fire base
 
-### `npm start`
+### `npm run start`
 
 Runs the application 
 
