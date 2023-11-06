@@ -78,12 +78,12 @@ export function Api() {
 
       <header class="header" id="header">
         <nav class="nav container">
-          <a href="#" class="nav__logo">Mibzar</a>
+          <a href="/" class="nav__logo">Mibzar</a>
 
           <div class="nav__menu" id="nav-menu">
             <ul class="nav__list grid">
               <li class="nav__item">
-                <a href="/#home" class="nav__link active-link">
+                <a href="/" class="nav__link active-link">
                   <i class="uil uil-estate nav__icon"></i>Home
                 </a>
               </li>
