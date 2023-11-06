@@ -6,6 +6,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm i`
+
+Install all dependencies for use fire base
+
+### `npm start`
+
+Runs the application 
+
 ### `npm start`
 
 Runs the app in the development mode.\
